@@ -1,0 +1,28 @@
+> Start/Launch Docker Images:
+------
+docker-compose -f docker-compose.yml up
+------
+
+
+
+> After Docker Image Up, type following URL to launch the Wordpress Site:
+------
+http://localhost:8080
+------
+
+
+> DB can be connected using following connection params:
+------
+HOST: localhost
+PORT: 3306
+USER: root
+PASSWORD: your-root-password
+------
+
+
+
+
+> Shutdown Docker Images (Free your computer memory):
+------
+docker-compose -f docker-compose.yml down
+------
