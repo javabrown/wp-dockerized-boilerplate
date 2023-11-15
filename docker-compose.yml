@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: your-root-password
+      MYSQL_DATABASE: wordpress
+    volumes:
+      - ./mysql_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+  wordpress:
+    image: wordpress:latest
+    ports:
+      - "8080:80"
+    env_file: .env
+    volumes:
+      - ./wpress_files:/var/www/html
+volumes:
+  mysql-data:
+  wordpress-data:
